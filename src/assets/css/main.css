@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body a {
+  text-decoration: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.header .titulos {
+  display: flex;
+  flex-direction: column;
+}
+.header .titulos .header-titulo-menor {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #287094;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+.header .titulos .header-titulo-maior {
+  font-size: 36px;
+  font-weight: 500;
+  color: #333333;
+  margin-top: 0;
+  margin-left: 0;
+}
+.header .header-botoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 899px) {
+  .header .header-botoes {
+    justify-content: center;
+  }
+}
+.header .header-botoes button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.app-footer {
+  border-top: 1px solid #c1c1c14f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.app-footer a {
+  margin: 10px;
+  text-decoration: none;
+  color: #023246;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.app-curso-detalhes {
+  display: flex;
+  flex-direction: column;
+}
+.app-curso-detalhes .link {
+  display: flex;
+  align-items: center;
+  color: #023246;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.app-curso-detalhes .link span {
+  margin-left: 5px;
+}
+.app-curso-detalhes .app-curso-painel-inscrever {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+.app-curso-detalhes .app-curso-painel-inscrever img {
+  height: 270px;
+  width: 100%;
+  object-fit: cover;
+}
+.app-curso-detalhes .app-curso-painel-inscrever .app-curso-painel-data {
+  color: #287094;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.curso-item {
+  z-index: 1;
+  background-color: #ffffff;
+  min-height: 500px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+.curso-item:hover {
+  transform: scale(1.03);
+}
+.curso-item .curso-item-conteudo {
+  display: flex;
+  flex-direction: column;
+}
+.curso-item .curso-item-conteudo img {
+  height: 270px;
+  width: 100%;
+  object-fit: cover;
+}
+.curso-item .curso-item-conteudo .curso-item-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.curso-item .curso-item-conteudo .curso-item-info .app-curso-data {
+  color: #287094;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.curso-item .curso-item-conteudo .curso-item-info .app-curso-titulo {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.curso-item .curso-item-conteudo .curso-item-info .app-curso-descricao {
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.curso-item .curso-item-conteudo .curso-item-info .app-curso-link {
+  color: #023246;
+  font-size: 14px;
+  font-weight: 600;
+}
+.app-faixa {
+  display: flex;
+  align-items: center;
+  height: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+.app-faixa.rounded {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.app-faixa .app-faixa-cor {
+  height: 100%;
+}
+.app-faixa .app-faixa-cor.cor1 {
+  width: 50%;
+  background-color: #287094;
+}
+.app-faixa .app-faixa-cor.cor2 {
+  width: 25%;
+  background-color: #023246;
+}
+.app-faixa .app-faixa-cor.cor3 {
+  width: 25%;
+  background-color: #d4d4ce;
+}
+.app-login-painel {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  background-color: #f6f6f6;
+}
+@media (max-width: 600px) {
+  .app-login-painel {
+    width: 80%;
+  }
+}
+.app-login-painel .login-titulo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+}
+.app-login-painel .link-cadastrar {
+  text-decoration: #023246 underline;
+  color: #023246;
+  cursor: pointer;
+  align-self: flex-start;
+}

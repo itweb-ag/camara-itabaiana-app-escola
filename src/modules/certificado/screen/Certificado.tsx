@@ -27,7 +27,8 @@ export const Certificado = () => {
     ch: "",
     titulo: "",
     inicio: "",
-    nome: ""
+    nome: "",
+    ementa: ""
   });
   const {data, isValidating} = useCarregarCertificados(user.uuid);
   

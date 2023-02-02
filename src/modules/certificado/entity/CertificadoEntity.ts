@@ -6,4 +6,5 @@ export type CertificadoEntity = {
   ch: string
   nome: string
   cpf: string
+  ementa: string
 }

@@ -1,9 +1,11 @@
-import React, {createRef, useRef} from "react";
+import React, {createRef} from "react";
 import {Dialog, IconButton, Tooltip, Typography} from "@mui/material";
 import {CertificadoEntity} from "../entity/CertificadoEntity";
 import ImgCertificado from "../../../assets/img/certificado.png";
+import ImgMoldura from "../../../assets/img/Moldura.png";
 import {FaDownload, FaTimes} from "react-icons/fa";
 import html2canvas from "html2canvas";
+import parse from 'html-react-parser';
 
 type Argumentos = {
   certificado: CertificadoEntity
@@ -16,11 +18,11 @@ export const ModalImagem = ({certificado, open, onClose}: Argumentos) => {
     if (refCert.current) {
       html2canvas(refCert.current, {
         windowWidth: 1920,
-        windowHeight: 1080,
+        windowHeight: 1500,
         x: 5,
         y: 50,
         width: 1080,
-        height: 650
+        height: 1300
       }).then(canvas => {
         let link = document.createElement("a");
         link.download = `Certificado ${certificado.titulo}.png`;
@@ -55,6 +57,7 @@ export const ModalImagem = ({certificado, open, onClose}: Argumentos) => {
         </Tooltip>
       </div>
       <img src={ImgCertificado} alt={"Imagem"} style={{zIndex: 1, width: "1080px", height: "650px"}}/>
+      <img src={ImgMoldura} alt={"Imagem"} style={{zIndex: 1, width: "1080px", height: "650px"}}/>
       <div
         style={{position: "absolute", top: "260px", left: "160px", width: "780px", textAlign: "center", zIndex: "2"}}>
         <Typography fontSize={18}>
@@ -76,7 +79,17 @@ export const ModalImagem = ({certificado, open, onClose}: Argumentos) => {
       </div>
       
       <div
-        style={{position: "absolute", top: "620px", left: "160px", width: "780px", textAlign: "center", zIndex: "2"}}>
+        style={{position: "absolute", top: "812px", left: "160px", width: "780px", textAlign: "center", zIndex: "2"}}>
+        <Typography fontSize={24} fontWeight={600} textTransform={"uppercase"}>
+          Conteúdo Programático
+        </Typography>
+      </div>
+      <div
+        style={{position: "absolute", top: "860px", left: "160px", width: "780px", zIndex: "2"}}>
+        {certificado.ementa ? parse(certificado.ementa) : null}
+      </div>
+      <div
+        style={{position: "absolute", top: "1270px", left: "160px", width: "780px", textAlign: "center", zIndex: "2"}}>
         <Typography fontSize={12}>
           Este certificado pode ser validado através do link:
         </Typography>
